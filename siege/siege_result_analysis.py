@@ -75,8 +75,8 @@ def main(argv):
     def addRow(metric, greater_is_better=False):
       clean_values, exp_failures = columnValues(clean, metric)
       exp_values, clean_failures = columnValues(experimental, metric)
-      mean_clean = statistics.median(clean_values)
-      mean_exp = statistics.median(exp_values)
+      mean_clean = statistics.mean(clean_values)
+      mean_exp = statistics.mean(exp_values)
       improvement = "0"
       if mean_clean > 0:
         improvement_percent = 100 * ((mean_clean - mean_exp) / mean_clean)

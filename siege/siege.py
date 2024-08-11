@@ -145,8 +145,8 @@ def main(argv):
 
     # Loops 5x interleaving runs with the clean and experimental versions
     # of Envoy, collecting the results in separate CSV files.
-    progress("Logging 10 runs to %s " % log)
-    for run in range(0, 5):
+    progress("Logging 60 runs to %s " % log)
+    for run in range(0, 100):
       runEnvoyAndSiege(clean_envoy, clean_csv_files)
       progress("...%d" % (2 * run + 1))
       runEnvoyAndSiege(experimental_envoy, experimental_csv_files)
